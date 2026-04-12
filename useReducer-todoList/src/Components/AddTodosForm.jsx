@@ -1,7 +1,11 @@
-import {useState} from 'react'
+import {useState,useContext} from 'react'
+import { TodosContext } from './TodoProvider';
 
-function AddTodosForm({dispatch}) {
+function AddTodosForm() {
+const {dispatch} = useContext(TodosContext)
+
   const [title, setTitle] = useState("");
+
   function handleSubmit(e){
     e.preventDefault();
     if(title.trim().length == 0){

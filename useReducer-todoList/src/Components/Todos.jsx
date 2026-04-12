@@ -1,6 +1,8 @@
-import React from 'react'
+import {useContext} from 'react'
 import Todo from './Todo'
-function Todos({todos, dispatch}) {
+import { TodosContext } from './TodoProvider'
+function Todos() {
+  const {todos, dispatch} = useContext(TodosContext)
   return (
     <div>
        
